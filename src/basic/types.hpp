@@ -1,5 +1,5 @@
-#ifndef _CANYON_CONSTANTS_HPP
-#define _CANYON_CONSTANTS_HPP
+#ifndef _CANYON_BASIC_TYPES
+#define _CANYON_BASIC_TYPES
 #include <cstdint>
 namespace canyon{
 typedef uint64_t word_length_t;

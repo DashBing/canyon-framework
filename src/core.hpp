@@ -1,5 +1,5 @@
-#ifndef _CANYON_CORE_HPP
-#define _CANYON_CORE_HPP
+#ifndef _CANYON_CORE
+#define _CANYON_CORE
 #include "basic/types.hpp"
 namespace canyon{
 class Core{  // CPU核心类

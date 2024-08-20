@@ -1,9 +1,10 @@
-#ifndef CANYON_MEMORY_HPP
-#define CANYON_MEMORY_HPP
+#ifndef CANYON_MEMORY
+#define CANYON_MEMORY
 
 #include "basic/types.hpp"
 #include <vector>
 #include <stdexcept>
+
 namespace canyon{
 
 namespace memory{
@@ -43,5 +44,5 @@ class Memory{
     public:
     Memory(){}
 };
-
+}
 #endif

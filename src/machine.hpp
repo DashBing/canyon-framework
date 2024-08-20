@@ -1,5 +1,5 @@
-#ifndef CANYON_MACHINE_HPP
-#define CANYON_MACHINE_HPP
+#ifndef CANYON_MACHINE
+#define CANYON_MACHINE
 #include "basic/types.hpp"
 namespace canyon{
 class Machine{
