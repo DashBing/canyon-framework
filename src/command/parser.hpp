@@ -4,7 +4,7 @@
 #include "command_def.hpp"
 namespace canyon{
 
-void command_parser(Core * core);
+void command_parser(Core * core);  // 单条指令执行器
 
 }
 #endif
