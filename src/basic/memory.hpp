@@ -52,6 +52,17 @@ class Memory{
         memlist.clear();
         memindex.clear();
     }
+    word_length_t get_page_size(){
+        return(memlist.size());
+    }
+    word_length_t size(){
+        return(memindex.back());
+    }
+    word_length_t check_page_size(word_length_t index){
+        if(index>memindex.size()-1)return(0);
+        else if(index==0)return(memindex[0]);
+        else return(memindex[index]-memindex[index-1]);
+    }
 
     public:
     Memory(){}
