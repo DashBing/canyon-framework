@@ -19,10 +19,13 @@ class Memory{
     std::vector<word_length_t> memindex;
 
     public:
-    void create_page(word_length_t size_byte){  // 创建内存页
-        memlist.push_back(new uint8_t[size_byte]);
+    void add_page(uint8_t * adr, word_length_t size_byte){  // 添加已有内存页
+        memlist.push_back(adr);
         if(memindex.size() == 0)memindex.push_back(size_byte-1);
         else memindex.push_back(memindex.back()+size_byte);
+    }
+    void create_page(word_length_t size_byte){  // 创建内存页
+        add_page(new uint8_t[size_byte], size_byte);
     }
     uint8_t & at(word_length_t index){  // 索引位置
         bool found = false;
@@ -56,7 +59,8 @@ class Memory{
         return(memlist.size());
     }
     word_length_t size(){  // 取总大小
-        return(memindex.back());
+        if(memindex.size()==0)return 0;
+        else return(memindex.back());
     }
     word_length_t check_page_size(word_length_t index){  // 查看一个页的大小
         if(index>memindex.size()-1)return(0);
