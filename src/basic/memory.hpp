@@ -55,7 +55,7 @@ class Memory{
         memlist.clear();
         memindex.clear();
     }
-    word_length_t get_page_size(){  // 取页数
+    word_length_t get_page_count(){  // 取页数
         return(memlist.size());
     }
     word_length_t size(){  // 取总大小
@@ -66,6 +66,10 @@ class Memory{
         if(index>memindex.size()-1)return(0);
         else if(index==0)return(memindex[0]);
         else return(memindex[index]-memindex[index-1]);
+    }
+    uint8_t * check_page_adr(word_length_t index){
+        if(index>memindex.size()-1)memory_priv::throw_out_of_range();
+        return(memlist[index]);
     }
     void remove_page(word_length_t index){  // 从表中移除页
         if(index>memindex.size()-1)return;
