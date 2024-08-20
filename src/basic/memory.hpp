@@ -92,6 +92,7 @@ class Memory{
     public:
     Memory(){}
     Memory(word_length_t size_byte){create_page(size_byte);}
+    Memory(uint8_t * adr, word_length_t size_byte){add_page(adr, size_byte);}
     ~Memory(){clear();}
 
     public:
