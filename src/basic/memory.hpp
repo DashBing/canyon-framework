@@ -9,7 +9,7 @@ namespace canyon{
 
 namespace memory_priv{
     void throw_out_of_range(){
-        throw std::out_of_range("Memory index exceeds memory size.");
+        throw std::runtime_error("Memory index exceeds memory size.");
     }
 }
 
