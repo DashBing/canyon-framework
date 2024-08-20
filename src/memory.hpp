@@ -1,3 +1,6 @@
+#ifndef CANYON_MEMORY_HPP
+#define CANYON_MEMORY_HPP
+
 #include "basic/types.hpp"
 #include <vector>
 #include <stdexcept>
@@ -40,3 +43,5 @@ class Memory{
     public:
     Memory(){}
 };
+
+#endif
