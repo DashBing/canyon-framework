@@ -1,7 +1,7 @@
-#ifndef CANYON_MEMORY
-#define CANYON_MEMORY
+#ifndef CANYON_BASIC_MEMORY
+#define CANYON_BASIC_MEMORY
 
-#include "basic/types.hpp"
+#include "types.hpp"
 #include <vector>
 #include <stdexcept>
 
