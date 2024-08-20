@@ -7,7 +7,7 @@
 
 namespace canyon{
 
-namespace memory{
+namespace memory_priv{
     void throw_out_of_range(){
         throw std::out_of_range("Memory index exceeds memory size.");
     }
@@ -27,7 +27,7 @@ class Memory{
     uint8_t & at(word_length_t index){
         bool found = false;
         uint8_t *c;
-        if(memindex.size()==0)memory::throw_out_of_range();
+        if(memindex.size()==0)memory_priv::throw_out_of_range();
         else if(0<=index&&index<=memindex[0]){
             found = true;
             c = memlist[0]+index;
@@ -38,7 +38,7 @@ class Memory{
                 c = memlist[i]+index-memindex[i-1];
             }
         }
-        if(!found)memory::throw_out_of_range();
+        if(!found)memory_priv::throw_out_of_range();
     }
 
     public:
