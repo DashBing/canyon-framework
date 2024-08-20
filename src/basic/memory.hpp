@@ -39,10 +39,27 @@ class Memory{
             }
         }
         if(!found)memory_priv::throw_out_of_range();
+        if(found){
+            uint8_t &p = *c;
+            return(p);
+        }
+        else memory_priv::throw_out_of_range();
+    }
+    void clear(){
+        for(auto i : memlist){
+            delete[] i;
+        }
+        memlist.clear();
+        memindex.clear();
     }
 
     public:
     Memory(){}
+    Memory(word_length_t size_byte){add_memory_block(size_byte);}
+    ~Memory(){clear();}
+
+    public:
+    uint8_t & operator [](word_length_t index){return(at(index));}
 };
 }
 #endif
