@@ -1,3 +1,8 @@
-#ifndef _CANYON_BASIC_FILE
-#define _CANYON_BASIC_FILE
+#ifndef _CANYON_BASIC_DISK
+#define _CANYON_BASIC_DISK
+#include <fstream>
+
+namespace canyon{
+class Disk{};
+}
 #endif
