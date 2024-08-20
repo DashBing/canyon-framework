@@ -1,6 +1,6 @@
 #ifndef _CANYON_CORE_HPP
 #define _CANYON_CORE_HPP
-#include "constants.hpp"
+#include "basic/types.hpp"
 namespace canyon{
 class Core{  // CPU核心类
     /*寄存器定义区*/

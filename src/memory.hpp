@@ -1,5 +1,4 @@
-#include "types.h"
-#include "constants.hpp"
+#include "basic/types.hpp"
 #include <vector>
 #include <stdexcept>
 namespace canyon{
