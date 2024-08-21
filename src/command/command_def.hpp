@@ -42,5 +42,17 @@ enum command : uint16_t{  // 指令定义
     alu_int_sub = 0x020a,
     alu_int_times = 0x020b,
     alu_int_div = 0x020c,
+    alu_int_mod = 0x020d,
+    alu_int_to_float = 0x020e,
+    alu_float_to_int = 0x020f,
+    alu_float_big = 0x0210,
+    alu_float_big_eq = 0x0211,
+    alu_float_small = 0x0212,
+    alu_float_small_eq = 0x0213,
+    alu_float_plus = 0x0214,
+    alu_float_sub = 0x0215,
+    alu_float_times = 0x0216,
+    alu_float_div = 0x0217,
+    alu_float_pow = 0x0218,
 };}
 #endif
